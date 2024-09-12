@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Primary
+@Primary
 public class RazorpayPaymentGateway implements PaymentGateway {
     private RazorpayClient razorpayClient;
 
@@ -22,7 +22,7 @@ public class RazorpayPaymentGateway implements PaymentGateway {
         paymentLinkRequest.put("amount",amount);
         paymentLinkRequest.put("currency","INR");
         paymentLinkRequest.put("accept_partial",true);
-        paymentLinkRequest.put("expire_by",1725186830);
+        paymentLinkRequest.put("expire_by",1726192005);
         paymentLinkRequest.put("reference_id",orderId);
         paymentLinkRequest.put("description","Payment for order no" + orderId);
         JSONObject customer = new JSONObject();
